@@ -38,23 +38,26 @@ mobile-screenshot.jpg (see source files)
 
 ### Links
 
-- Solution URL (GitHub Pages): [Add solution URL here](https://your-solution-url.com)
-- Live Site URL (Hosted through Vercel): [Add live site URL here](https://your-live-site-url.com)
+- Solution URL (GitHub Pages): https://dmitriyraz.github.io/Smooth-FAQ/
+- Live Site URL (Hosted through Vercel): https://smooth-faq.vercel.app/
 
 ## My process
 
+- Build parent first
+- Build child second
+- Make responsive
+- Build JS logic
+- Style
+- Debug
+- Deploy
+
 ### Built with
 
-- Semantic HTML5 markup
+- Semantic HTML5 markup (using classes, not section tags. Is this still semantic markup?)
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- Some JS logic
 
 ### What I learned
 
