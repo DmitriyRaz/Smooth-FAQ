@@ -1,0 +1,177 @@
+/* Setting up our project with universal selector */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+/* Giving our webpage full viewport height and width */
+body,
+html {
+  height: 100vh; /* or 'height: 100%;'  */
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Giving our parent container full height/width  and centering relative to body */
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+img {
+  width: 100%; /* Make image responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Styling our parent container, which will hold all content */
+.child {
+  width: 90vw; /* Actual width of the child container, */
+  max-width: 1440px; /* Maximum width to ensure the layout doesn't look too stretched on large screens */
+  height: auto; /* Adjust height automatically */
+  aspect-ratio: 16 / 9; /* Maintain an aspect ratio, this is how design was laid out  */
+  margin: 3rem; /* Slight margin around child box  */
+  background-color: hsl(275, 100%, 97%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+  /* WHY DOESN'T IMG STACK ABOVE BOX?? I have no idea dude*/
+}
+
+/* Styling our content box, which will hold FAQ drop down section */
+.content-box {
+  position: absolute; /* Position the box absolutely within .child */
+  top: 50%; /* Center the box vertically */
+  left: 50%; /* Center the box horizontally */
+  transform: translate(-50%, -50%); /* Adjust the position to truly center it */
+
+  background-color: white; /* Background color of the box */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+  font-weight: bold;
+
+  width: 80%; /* For responsiveness */
+  max-width: 28rem; /* For making sure the box doesn't strech too wide on big screens */
+}
+
+/* Making usre the title is displayed inline */
+.title-FAQ {
+  display: flex;
+}
+
+/* Making image take 100% of the child container, and height is auto for aspect ratio */
+img {
+  width: 100%; /* Make image responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Styling FAQ title and giving it some space */
+h1 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-left: 1.5rem;
+}
+
+/* Fitting the star icon inside mini title container */
+.icon {
+  width: auto;
+  height: auto;
+}
+
+/* Styling the little plus icons */
+.icon1 {
+  display: flex;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Styling for each question and answer. Answer is currently hidden */
+.accordian-content {
+  margin: 10px 0;
+  overflow: hidden;
+  border-bottom: 1px solid lightgray;
+}
+
+/* When answer is shown, adding some paddig */
+.accordian-content.open {
+  padding-bottom: 10px;
+}
+
+/* Just the question section (question + icon, and icon is styling through icon1) */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  min-height: 50px;
+}
+
+/* Just the question */
+.title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Hovering over the title and turning it pink/ purplish */
+.title:hover {
+  color: #ad28eb;
+}
+
+/* The answer */
+.description {
+  height: 0;
+  padding: 0;
+  font-size: 12px;
+  color: #333;
+  font-weight: 400;
+  transition: all 0.2s linear;
+  line-height: 20px;
+}
+
+/* Removing bottom border from last question */
+.accordian-content:last-child {
+  border-bottom: none;
+}
+
+/* Giving all question semi-bold style */
+.title {
+  font-weight: 600;
+}
+
+/* Hiding mobile background image */
+.mobile-image {
+  display: none;
+}
+
+/* Our media queries, we have just 1, less than 768 pixels wide */
+@media (max-width: 768px) {
+  /* Hides desktop image */
+  .desktop-image {
+    display: none;
+  }
+
+  /* This can be any display, we just need the mobile visible */
+  .mobile-image {
+    display: block;
+  }
+
+  /* All the styling for mobile child */
+  .child {
+    width: 100vw; /* Use viewport width to cover the entire screen width */
+    height: 100vh; /* Use viewport height to cover the entire screen height */
+    max-width: none; /* Remove the max-width constraint */
+    margin: 0; /* Remove any default margins to ensure full width */
+    aspect-ratio: unset; /* Remove the aspect ratio constraint */
+    border: none; /* If border is not required */
+    background-color: hsl(275, 100%, 97%);
+    box-shadow: none; /* Optional: remove if you don't want a shadow */
+    overflow: hidden;
+  }
+}

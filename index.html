@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet" />
+    <title>Frontend Mentor | FAQ accordion</title>
+  </head>
+  <body>
+
+    <!-- This is the parent section, everything lives inside of it -->
+    <div class="parent">
+      <!-- This is the child section, our FAQ background as well as FAQ lives here -->
+      <div class="child">
+        <!-- Our background images, one for destktop and one for mobile (hidden), all styling in CSS -->
+        <img
+          src="assets/images/background-pattern-desktop.svg"
+          class="desktop-image"
+          alt="background-pattern-desktop" />
+        <img
+          src="assets/images/background-pattern-mobile.svg"
+          alt="background-pattern-mobile"
+          class="mobile-image" />
+        <!-- Our background images, one for destktop and one for mobile (hidden), all styling in CSS -->
+
+        <!-- Here is the content box, which is overlayed on top of the background image and holds the FAQ content -->
+        <div class="content-box">
+
+          <!-- Title for FAQ section -->
+          <div class="title-FAQ">
+            <img
+              src="assets/images/icon-star.svg"
+              alt="icon-star"
+              class="icon" />
+            <h1>FAQ's</h1>
+          </div>
+          <!-- Title for FAQ section -->
+
+          <!-- Question and answer #1 -->
+          <div class="accordian-content">
+            <header>
+              <span class="title">What is Frontend Mentor, and how will it help
+                me?</span>
+              <img
+                src="assets/images/icon-plus.svg"
+                alt="icon-plus"
+                class="icon1" />
+            </header>
+
+            <p class="description">
+              Frontend Mentor offers realistic coding challenges to help
+              developers improve their frontend coding skills with projects in
+              HTML, CSS, and JavaScript. It's suitable for all levels and ideal
+              for portfolio building.
+            </p>
+          </div>
+          <!-- Question and answer #1 -->
+
+          <!-- Question and answer #2 -->
+          <div class="accordian-content">
+            <header>
+              <span class="title">Is Frontend Mentor free?</span>
+              <img
+                src="assets/images/icon-plus.svg"
+                alt="icon-plus"
+                class="icon1" />
+            </header>
+
+            <p class="description">
+              Yes, Frontend Mentor offers both free and premium coding
+              challenges, with the free option providing access to a range of
+              projects suitable for all skill levels.
+            </p>
+          </div>
+          <!-- Question and answer #2 -->
+
+          <!-- Question and answer #3 -->
+          <div class="accordian-content">
+            <header>
+              <span class="title">Can I use Frontend Mentor projects in my
+                portfolio?</span>
+              <img
+                src="assets/images/icon-plus.svg"
+                alt="icon-plus"
+                class="icon1" />
+            </header>
+
+            <p class="description">
+              Yes, you can use projects completed on Frontend Mentor in your
+              portfolio. It's an excellent way to showcase your skills to
+              potential employers!
+            </p>
+          </div>
+          <!-- Question and answer #3 -->
+
+          <!-- Question and answer #4 -->
+          <div class="accordian-content">
+            <header>
+              <span class="title">How can I get help if I'm stuck on a
+                challenge?</span>
+              <img
+                src="assets/images/icon-plus.svg"
+                alt="icon-plus"
+                class="icon1" />
+            </header>
+
+            <p class="description">
+              The best place to get help is inside Frontend Mentor's Discord
+              community. There's a help channel where you can ask questions and
+              seek support from other community members.
+            </p>
+          </div>
+          <!-- Question and answer #4 -->
+        </div>
+        <!-- Here is the content box, which is overlayed on top of the background image and holds the FAQ content -->
+      </div>
+      <!-- This is the child section, our FAQ background as well as FAQ lives here -->
+    </div>
+    <!-- This is the parent section, everything will live inside of it -->
+    <script src="Menu.js"></script>
+
+  </body>
+</html>
